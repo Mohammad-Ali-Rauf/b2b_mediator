@@ -22,8 +22,8 @@ Two parties arguing? Our AI steps in with balanced, emotion-aware responses — 
 | Layer           | Tech & Purpose                     |
 |-----------------|----------------------------------|
 | Frontend        | Next.js — UI, audio capture & playback, WebSocket client  |
-| Backend API     | FastAPI — REST + WebSocket server for real-time comms     |
-| AI Core         | Google Gemini (LLM) + LangChain for prompt management     |
+| Backend API     | FastAPI — gRPC + WebSocket server for real-time comms     |
+| AI Core         | Google Gemini (LLM) + LangGraph for prompt management     |
 | Vector Storage  | Qdrant (local) — Memory & context storage via embeddings  |
 | Audio Processing| WebRTC/Web Audio API + Python libs for STT & TTS          |
 
