@@ -1,0 +1,6 @@
+grpcio 
+grpcio-tools
+langgraph 
+langchain-google-genai 
+google-genai
+python-dotenv

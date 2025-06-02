@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package mediator;
+
+enum Emotion {
+  UNKNOWN = 0;
+  CALM = 1;
+  ASSERTIVE = 2;
+  EMPATHETIC = 3;
+  ANGRY = 4;
+  CONFUSED = 5;
+}
+
+// 🎤 Stream from each user
+message VoiceStream {
+  string user_id = 1;
+  bytes audio_chunk = 2;       // Raw audio data
+  string timestamp = 3;
+}
+
+// 🧠 AI's reply (TTS-ready)
+message MediationResponse {
+  string agent_id = 1;
+  string text = 2;
+  bytes audio = 3;
+  Emotion emotion = 4;
+  string summary = 5;
+}
+
+// ✅ Health check
+message Empty {}
+message Status {
+  string message = 1;
+}
+
+// 🎙️ Bi-directional stream
+service MediatorService {
+  
+  // Stream voice chunks and get mediation responses if needed
+  rpc Mediate (stream VoiceStream) returns (stream MediationResponse);
+
+  // Optional: Health check
+  rpc Ping (Empty) returns (Status);
+}
