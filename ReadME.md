@@ -86,5 +86,3 @@ PRs & issues welcome. Let's make AI mediation a reality!
 MIT License — Do whatever you want with it, just don’t be toxic 😎
 
 ---
-
-**This project is a wild ride towards making human conflicts a little less messy, one voice at a time.**
